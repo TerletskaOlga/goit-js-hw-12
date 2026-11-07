@@ -7,4 +7,125 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #2e2f42;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 36px 0;
+}
+
+.form input {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form button {
+  min-width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-item {
+  border: 1px solid #808080;
+  overflow: hidden;
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.info p {
+  margin: 0;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: 30px auto;
+  border: 5px solid #e0e0e0;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.btn-load-more {
+  display: block;
+  margin: 24px auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-load-more:hover {
+  background-color: #6c8cff;
 }
